@@ -11,13 +11,14 @@
 #include "stm8l15x.h"
 #include "stdint.h"
 
+#define IAR_RAM_EXECUTION  (1) // to enable the FLASH functions execution from RAM for IAR compiler
+
 #define FLASH_BLOCK_SIZE                           ((uint8_t)0x80)        /*!< Number of bytes in a Block*/
 #define FLASH_PROGRAM_START_PHYSICAL_ADDRESS       ((uint32_t)0x00008000) /*!< Flash: start address */  
 #define FLASH_PROGRAM_END_PHYSICAL_ADDRESS         ((uint32_t)0x00017FFF) /*!< Flash: end address */
-#define MAIN_USER_RESET_ADDR 0x009400
-#define OPERATION_TIMEOUT					 	   ((uint16_t)0xFFFF)
-#define MASS_PROG_KEY_1							   (0x56)
-#define MASS_PROG_KEY_2							   (0xAE)
+#define OPERATION_TIMEOUT					 	               ((uint16_t)0xFFFF)
+#define MASS_PROG_KEY_1							               (0x56)
+#define MASS_PROG_KEY_2							               (0xAE)
 
 
 typedef enum {

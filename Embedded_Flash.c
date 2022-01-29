@@ -1,8 +1,6 @@
 #include "Embedded_Flash.h"
 
 
-uint8_t DataBuffer[2 * FLASH_BLOCK_SIZE];
-uint32_t  AppFlashAddress =  MAIN_USER_RESET_ADDR;
 
 void FLASH_UnlockPROG(void) {
   FLASH->PUKR = MASS_PROG_KEY_1;
